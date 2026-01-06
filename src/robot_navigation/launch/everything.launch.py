@@ -10,8 +10,9 @@ def generate_launch_description():
     launch_dir = os.path.join(pkg_dir, 'launch')
     return LaunchDescription([
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(os.path.join(launch_dir, 'motors_and_odometry.launch.py'))),
-        IncludeLaunchDescription(
+        # IncludeLaunchDescription(
+        #     PythonLaunchDescriptionSource(os.path.join(launch_dir, 'motors_and_odometry.launch.py'))
+        # ),        IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(launch_dir, 'lidar_conversion.launch.py'))),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(launch_dir, 'amcl_localization.launch.py'))),
